@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "climav2",
-    "slug": "climav2",
-    "version": "1.0.0",
+    "name": "Weather App",
+    "slug": "WeatherApp",
+    "version": "1.5.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,11 +24,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.peralsteam.weatherapp",
-      "versionCode": 2
+      "package": "com.peralsteam.weather",
+      "versionCode": 5
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/PeralStudio/React-Native-Weather-App"
   }
 }

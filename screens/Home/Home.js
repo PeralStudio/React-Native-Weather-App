@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import styles from './styles'
 import { API_TOKEN, BASE_WEATHER_URL, BASE_WEATHER_FORECAST_URL } from "@env"
 import { SearchBar } from 'react-native-elements';
 import haze from '../../assets/haze.jpg';
@@ -103,28 +104,5 @@ const Home = (props) => {
         </ImageBackground>
     )
 }
-
-const styles = StyleSheet.create({
-    backgroundImg: {
-        height: '100%',
-    },
-    container: {
-        flex: 1,
-        alignContent: 'center',
-        marginTop: 100,
-        paddingHorizontal: 20,
-    },
-    firstView: {
-        marginBottom: 10
-    },
-    button: {
-        alignSelf: 'center',
-        alignItems: 'center',
-        width: '25%',
-        padding: 10,
-        backgroundColor: '#23272B',
-        borderRadius: 10
-    }
-});
 
 export default Home

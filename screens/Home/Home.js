@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
-import { ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import styles from './styles'
-import { API_TOKEN, BASE_WEATHER_URL, BASE_WEATHER_FORECAST_URL } from "@env"
-import { SearchBar } from 'react-native-elements';
-import haze from '../../assets/haze.jpg';
+import React, { useState } from "react";
+import { StyleSheet } from "react-native";
+import {
+    ImageBackground,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from "react-native";
+import styles from "./styles";
+import { API_TOKEN, BASE_WEATHER_URL, BASE_WEATHER_FORECAST_URL } from "@env";
+import { SearchBar } from "react-native-elements";
+import haze from "../../assets/haze.jpg";
 
+import { AdMobBanner, PublisherBanner } from "expo-ads-admob";
 
 const Home = (props) => {
-
-    const [citySearch, setCitySearch] = useState('');
+    const [citySearch, setCitySearch] = useState("");
     const [currentWeather, setCurrentWeather] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
 
@@ -28,31 +35,31 @@ const Home = (props) => {
 
             // const { latitude, longitude } = location.coords
 
-            const weatherUrl = `${BASE_WEATHER_URL}${citySearch}&units=metric&appid=${API_TOKEN}`
+            const weatherUrl = `${BASE_WEATHER_URL}${citySearch}&units=metric&appid=${API_TOKEN}`;
 
-            const response = await fetch(weatherUrl)
+            const response = await fetch(weatherUrl);
 
-            const result = await response.json()
+            const result = await response.json();
 
-            const weatherUrlForecast = `${BASE_WEATHER_FORECAST_URL}lat=${result.coord.lat}&lon=${result.coord.lon}&exclude=minutely&appid=${API_TOKEN}`
+            const weatherUrlForecast = `${BASE_WEATHER_FORECAST_URL}lat=${result.coord.lat}&lon=${result.coord.lon}&exclude=minutely&appid=${API_TOKEN}`;
 
-            const responseForecast = await fetch(weatherUrlForecast)
+            const responseForecast = await fetch(weatherUrlForecast);
 
-            const resultForecast = await responseForecast.json()
+            const resultForecast = await responseForecast.json();
 
             if (response.ok) {
-                setCurrentWeather(result)
-                props.navigation.navigate('Data', {
+                setCurrentWeather(result);
+                props.navigation.navigate("Data", {
                     currentWeather: result,
-                    weatherForecast: resultForecast
+                    weatherForecast: resultForecast,
                 });
-                setCitySearch('');
+                setCitySearch("");
                 getForecastCall(result);
             }
         } catch (error) {
-            setErrorMessage(error.message)
+            setErrorMessage(error.message);
         }
-    }
+    };
 
     // const getForecastCall = async (resultForecast) => {
 
@@ -75,20 +82,25 @@ const Home = (props) => {
         <ImageBackground
             source={haze}
             style={styles.backgroundImg}
-            resizeMode='cover'
+            resizeMode="cover"
         >
             <View style={styles.container}>
                 <View style={styles.firstView}>
                     <SearchBar
                         placeholder="Buscar Ciudad"
-                        onChangeText={e => { setCitySearch(e) }}
+                        onChangeText={(e) => {
+                            setCitySearch(e);
+                        }}
                         value={citySearch}
                         containerStyle={{
-                            backgroundColor: 'transparent', borderWidth: 0, borderRadius: 5, borderBottomColor: 'transparent',
-                            borderTopColor: 'transparent'
+                            backgroundColor: "transparent",
+                            borderWidth: 0,
+                            borderRadius: 5,
+                            borderBottomColor: "transparent",
+                            borderTopColor: "transparent",
                         }}
-                    // lightTheme
-                    // style={styles.searchBar}
+                        // lightTheme
+                        // style={styles.searchBar}
                     />
                 </View>
                 <View>
@@ -96,13 +108,19 @@ const Home = (props) => {
                         style={styles.button}
                         onPress={() => fetchWeather(citySearch)}
                     >
-                        <Text
-                            style={{ color: 'white' }}>BUSCAR</Text>
+                        <Text style={{ color: "white" }}>BUSCAR</Text>
                     </TouchableOpacity>
+                </View>
+                <View style={styles.secondView}>
+                    <AdMobBanner
+                        bannerSize="largeBanner"
+                        adUnitID="ca-app-pub-6203383529182342/4630508059"
+                        servePersonalizedAds={false}
+                    />
                 </View>
             </View>
         </ImageBackground>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;

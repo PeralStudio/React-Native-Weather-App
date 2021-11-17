@@ -2526,6 +2526,14 @@
     "snapdragon" "^0.8.1"
     "to-regex" "^3.0.1"
 
+"expo-ads-admob@~11.0.3":
+  "integrity" "sha512-sr5E9iFWtWwuNmpEqPc0K46ZWbvvR+Umu5i5CLDEvbXGZb1rNosXRuhMVPvFbxeTQyNzF+7BKyX2MEN6ik5TTQ=="
+  "resolved" "https://registry.npmjs.org/expo-ads-admob/-/expo-ads-admob-11.0.3.tgz"
+  "version" "11.0.3"
+  dependencies:
+    "@expo/config-plugins" "^4.0.2"
+    "expo-modules-core" "~0.4.4"
+
 "expo-application@~4.0.0":
   "integrity" "sha512-7n8i0O9n/YCCkP3rU0udC4qdG4Sn4lOzNxFyG9eTwJ5SyCdDNxKdz22j+sUmYYhtx6fjcJLKR0sjq3zSGAwZag=="
   "resolved" "https://registry.npmjs.org/expo-application/-/expo-application-4.0.0.tgz"
@@ -4691,7 +4699,7 @@
   dependencies:
     "lodash" "^4.17.15"
 
-"react-native-safe-area-context@^3.1.9", "react-native-safe-area-context@>= 3.0.0":
+"react-native-safe-area-context@^3.1.9", "react-native-safe-area-context@^3.3.2", "react-native-safe-area-context@>= 3.0.0":
   "integrity" "sha512-yOwiiPJ1rk+/nfK13eafbpW6sKW0jOnsRem2C1LPJjM3tfTof6hlvV5eWHATye3XOpu2cJ7N+HdkUvUDGwFD2Q=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.3.2.tgz"
   "version" "3.3.2"
@@ -4736,10 +4744,10 @@
     "normalize-css-color" "^1.0.2"
     "prop-types" "^15.6.0"
 
-"react-native@*", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.2":
-  "integrity" "sha512-Ty/fFHld9DcYsFZujXYdeVjEhvSeQcwuTGXezyoOkxfiGEGrpL/uwUZvMzwShnU4zbbTKDu2PAm/uwuOittRGA=="
-  "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.64.2.tgz"
-  "version" "0.64.2"
+"react-native@*", "react-native@^0.64.3", "react-native@>=0.64.0-rc.0 || 0.0.0-*":
+  "integrity" "sha512-2OEU74U0Ek1/WeBzPbg6XDsCfjF/9fhrNX/5TFgEiBKd5mNc9LOZ/OlMmkb7iues/ZZ/oc51SbEfLRQdcW0fVw=="
+  "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.64.3.tgz"
+  "version" "0.64.3"
   dependencies:
     "@jest/create-cache-key-function" "^26.5.0"
     "@react-native-community/cli" "^5.0.1-alpha.1"

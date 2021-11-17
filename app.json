@@ -2,12 +2,12 @@
   "expo": {
     "name": "Weather App",
     "slug": "WeatherApp",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash2.png",
-      "resizeMode": "contain",
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -20,17 +20,20 @@
       "supportsTablet": true
     },
     "android": {
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-6203383529182342~2995527609"
+      },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.peralsteam.weather",
-      "versionCode": 5
+      "versionCode": 6
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "",
+    "description": "Busca infomación meteorologica de la cuidad que quieras.",
     "githubUrl": "https://github.com/PeralStudio/React-Native-Weather-App"
   }
 }

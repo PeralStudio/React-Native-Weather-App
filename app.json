@@ -33,7 +33,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Busca infomación meteorologica de la cuidad que quieras.",
+    "description": "Busca infomación meteorologica de la ciudad que quieras.",
     "githubUrl": "https://github.com/PeralStudio/React-Native-Weather-App"
   }
 }

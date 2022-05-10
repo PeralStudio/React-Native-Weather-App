@@ -116,6 +116,9 @@ const Home = (props) => {
                         bannerSize="largeBanner"
                         adUnitID="ca-app-pub-6203383529182342/4630508059"
                         servePersonalizedAds={false}
+                        onDidFailToReceiveAdWithError={(error) => {
+                            console.log(error);
+                        }}
                     />
                 </View>
             </View>

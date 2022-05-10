@@ -36,7 +36,7 @@ const Data = ({ route, navigation }) => {
                 <AdMobBanner
                     bannerSize="smartBannerPortrait"
                     adUnitID="ca-app-pub-6203383529182342/4630508059"
-                    servePersonalizedAds={false}
+                    servePersonalizedAds={true}
                 />
             </View>
             <View style={styles.viewTwo}>

@@ -13,11 +13,11 @@ const WeatherInfo = ({ currentWeather }) => {
             {currentWeather && (
                 <>
                     <View style={styles.weatherInfo}>
-                        <AdMobBanner
+                        {/* <AdMobBanner
                             bannerSize="smartBannerPortrait"
                             adUnitID="ca-app-pub-6203383529182342/4630508059"
-                            servePersonalizedAds={false}
-                        />
+                            servePersonalizedAds={true}
+                        /> */}
                         <Text style={styles.textName}>
                             {currentWeather.name}
                         </Text>

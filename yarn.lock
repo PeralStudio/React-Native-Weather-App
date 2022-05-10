@@ -2534,6 +2534,16 @@
     "@expo/config-plugins" "^4.0.2"
     "expo-modules-core" "~0.4.4"
 
+"expo-ads-facebook@~11.0.3":
+  "integrity" "sha512-V3sV+SFVIecxcnirXfQReW2Ou7aQgxbSY63pHLX/SERPqUYAYYbrLo/4NQvLHsNgwhIWInxu/MaKe51UjnyBwQ=="
+  "resolved" "https://registry.npmjs.org/expo-ads-facebook/-/expo-ads-facebook-11.0.3.tgz"
+  "version" "11.0.3"
+  dependencies:
+    "@expo/config-plugins" "^4.0.2"
+    "expo-modules-core" "~0.4.4"
+    "fbemitter" "^2.1.1"
+    "nullthrows" "^1.1.0"
+
 "expo-application@~4.0.0":
   "integrity" "sha512-7n8i0O9n/YCCkP3rU0udC4qdG4Sn4lOzNxFyG9eTwJ5SyCdDNxKdz22j+sUmYYhtx6fjcJLKR0sjq3zSGAwZag=="
   "resolved" "https://registry.npmjs.org/expo-application/-/expo-application-4.0.0.tgz"
@@ -4291,7 +4301,7 @@
   dependencies:
     "path-key" "^2.0.0"
 
-"nullthrows@^1.1.1":
+"nullthrows@^1.1.0", "nullthrows@^1.1.1":
   "integrity" "sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw=="
   "resolved" "https://registry.npmjs.org/nullthrows/-/nullthrows-1.1.1.tgz"
   "version" "1.1.1"
@@ -4704,10 +4714,10 @@
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.3.2.tgz"
   "version" "3.3.2"
 
-"react-native-screens@>= 3.0.0":
-  "integrity" "sha512-TP/kASLQ/2iGCz4/n9CHeveKC9urzbfYXFH+1TfBnqaBwjIszhVuadiIOQ0qWKdSs6qnBR2xPTp9U18sNoc34A=="
-  "resolved" "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.9.0.tgz"
-  "version" "3.9.0"
+"react-native-screens@^3.10.1", "react-native-screens@>= 3.0.0":
+  "integrity" "sha512-ZF/XHnRsuinvDY1XiCWLXxoUoSf+NgsAes2SZfX9rFQQcv128zmh/+19SSavGrSf6rQNzqytEMdRGI6yr4Gbjw=="
+  "resolved" "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.10.1.tgz"
+  "version" "3.10.1"
   dependencies:
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"
